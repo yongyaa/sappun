@@ -1,0 +1,131 @@
+// #ff7f50 (태두리) #222(글자색) #eee(배경색)
+//#ffe4c4(best) #000080(주문) #aaa(글자색2)
+//변수
+$wh:#fff;
+$stroke:#ff7f50;
+$ft_color1:#222;
+$bg:#eee;
+$best:#ffe4c4;
+$order:#000080;
+$ft_color2:#aaa;
+// mixin
+@mixin flex-center {display:flex; flex-flow:row nowrap; align-items:center; justify-content:center;}
+//----------------------------------------------
+// ----------------------------------------------design
+#popup {
+    background-color:$bg; text-align:center; padding:10px 0;
+    a { font-size:0.75rem; font-weight:600; color:$ft_color1}
+}
+header {
+    width:1200px;
+    margin:0 auto;
+    .top {
+        position:relative;
+        h1 {
+            text-align:center;
+            padding:50px 0;
+            a {img {}}
+        }
+        .right {
+            background:green;
+            @include flex-center;
+            position:absolute; bottom:15px; right:0;
+            li:first-child {position:relative;
+                > a::after{
+                    content:''; display:inline-block;
+                    width:10px; height:10px;
+                    background:url(../images/arr.png) no-repeat;
+                    margin-left:5px;
+                }
+                .lang {
+                    display:block; background:$wh;
+                    position:absolute; z-index:910;
+                    border:1px solid $ft_color2; left:-50%;
+                    a {font-size:0.75rem;}
+                }
+            }
+            li {
+                a {font-size:0.875rem; text-transform:uppercase; padding:10px 7px; display:block; position:relative;
+                    span {font-size:0.75rem; border:1px solid $stroke; border-radius:5px; padding:3px 10px; width:max-content; position:absolute; left:-50%; top:30px;}
+                }   
+            }
+        }
+        .all_nav {
+            display:block; background:$wh; border:1px solid $ft_color2; border-radius:10px;
+            position:fixed; left:50%; top:50%;
+            width:700px; height:500px; z-index:999;
+            transform:translate(-50%, -50%);
+            text-align:center; line-height:500px;
+            .close {
+                position:absolute; right:20px; top:20px;
+                font-size:1.5rem; font-weight:600; padding:10px;
+            }
+        }
+    }
+    .btm {
+        nav {
+            > ul {
+                @include flex-center;
+                > li {
+                    position:relative;
+                    > a {background:aqua; text-transform:uppercase; font-size:0.875rem; padding:15px; display:block;}
+                    > a:hover {opacity:0;}
+                    .sub {
+                        border:1px solid $ft_color2;
+                        display:block;
+                        background:$wh;
+                        position:absolute; width:100%;
+                        z-index:900;
+                        li {a{padding:10px; display:block;}}
+                    }
+                }
+            }
+        }
+    }
+} //e:header end
+main {
+    height:500vh;
+    #right_popup {
+            position:fixed; right:0; top:0;
+            display:flex;
+            align-items:center;
+        #left_btn {
+            background:#fff;
+            width:30px;
+            border:1px solid $ft_color2;
+            display:flex; flex-flow:column nowrap;
+            a:first-child {background:#ff7f50; border:none;}
+            a {width:100%; padding:5px 5px; text-align:center; border-top:1px solid $ft_color2; img {}}
+        }
+        .contents {background:#ff0; width:500px; height:100vh; padding:30px;
+            .info {
+                text-align:center;
+                img {}
+            }
+            .info + p {text-align:center; line-height:1.5; padding:20px 0;}
+            .user {background:green;
+                display:flex;
+                flex-flow:row wrap;
+                justify-content:space-between;
+                a{width:48%; border-bottom:1px solid #000; padding:7px 0;}
+            }
+            .board {background:skyblue;
+                display:flex;
+                flex-flow:row wrap;
+                justify-content:space-between;
+                padding:50px 0;
+                a {width:48%; border-bottom:1px solid #000; padding:7px 0;}
+            }
+            h2 {font-weight:600;}
+            h2 + p {
+                width:150px; padding:10px 0;
+                img {width:100%;}
+            }
+            address {font-size:2rem; padding:20px 0;}
+            address + p {line-height:1.5;}
+        }
+    }
+    .visual {
+        background:pink;
+        img {}}
+} // main end

@@ -1,0 +1,211 @@
+#popup {
+  background-color: #eee;
+  text-align: center;
+  padding: 10px 0;
+}
+#popup a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #222;
+}
+
+header {
+  width: 1200px;
+  margin: 0 auto;
+}
+header .top {
+  position: relative;
+}
+header .top h1 {
+  text-align: center;
+  padding: 50px 0;
+}
+header .top .right {
+  background: green;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+}
+header .top .right li:first-child {
+  position: relative;
+}
+header .top .right li:first-child > a::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url(../images/arr.png) no-repeat;
+  margin-left: 5px;
+}
+header .top .right li:first-child .lang {
+  display: block;
+  background: #fff;
+  position: absolute;
+  z-index: 910;
+  border: 1px solid #aaa;
+  left: -50%;
+}
+header .top .right li:first-child .lang a {
+  font-size: 0.75rem;
+}
+header .top .right li a {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  padding: 10px 7px;
+  display: block;
+  position: relative;
+}
+header .top .right li a span {
+  font-size: 0.75rem;
+  border: 1px solid #ff7f50;
+  border-radius: 5px;
+  padding: 3px 10px;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  left: -50%;
+  top: 30px;
+}
+header .top .all_nav {
+  display: block;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 700px;
+  height: 500px;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 500px;
+}
+header .top .all_nav .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px;
+}
+header .btm nav > ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+header .btm nav > ul > li {
+  position: relative;
+}
+header .btm nav > ul > li > a {
+  background: aqua;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 15px;
+  display: block;
+}
+header .btm nav > ul > li > a:hover {
+  opacity: 0;
+}
+header .btm nav > ul > li .sub {
+  border: 1px solid #aaa;
+  display: block;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 900;
+}
+header .btm nav > ul > li .sub li a {
+  padding: 10px;
+  display: block;
+}
+
+main {
+  height: 500vh;
+}
+main #right_popup {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+main #right_popup #left_btn {
+  background: #fff;
+  width: 30px;
+  border: 1px solid #aaa;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main #right_popup #left_btn a:first-child {
+  background: #ff7f50;
+  border: none;
+}
+main #right_popup #left_btn a {
+  width: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  border-top: 1px solid #aaa;
+}
+main #right_popup .contents {
+  background: #ff0;
+  width: 500px;
+  height: 100vh;
+  padding: 30px;
+}
+main #right_popup .contents .info {
+  text-align: center;
+}
+main #right_popup .contents .info + p {
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px 0;
+}
+main #right_popup .contents .user {
+  background: green;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+main #right_popup .contents .user a {
+  width: 48%;
+  border-bottom: 1px solid #000;
+  padding: 7px 0;
+}
+main #right_popup .contents .board {
+  background: skyblue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+main #right_popup .contents .board a {
+  width: 48%;
+  border-bottom: 1px solid #000;
+  padding: 7px 0;
+}
+main #right_popup .contents h2 {
+  font-weight: 600;
+}
+main #right_popup .contents h2 + p {
+  width: 150px;
+  padding: 10px 0;
+}
+main #right_popup .contents h2 + p img {
+  width: 100%;
+}
+main #right_popup .contents address {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+main #right_popup .contents address + p {
+  line-height: 1.5;
+}
+main .visual {
+  background: pink;
+}/*# sourceMappingURL=main.css.map */
