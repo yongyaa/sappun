@@ -84,7 +84,6 @@ header {
     }
 } //e:header end
 main {
-    height:500vh;
     #right_popup {
             position:fixed; right:0; top:0;
             display:flex;
@@ -127,5 +126,66 @@ main {
     }
     .visual {
         background:pink;
-        img {}}
-} // main end
+        img {}
+    }
+    .event_banner {
+        width:1200px;
+        margin:0 auto;
+        display:grid;
+        padding:70px 0;
+        grid-template-columns:repeat(3,32%);
+        justify-content:space-between;
+        a {img{width:100%;}}
+    }
+    .weekly_best {
+        width:1200px;
+        margin:0 auto;
+        > h2 {text-align:center; font-weight:600;}
+        .product {
+            padding:70px 0;
+            display:grid;
+            grid-template-columns:repeat(3,32.5%);
+            justify-content:space-between;
+            li {
+                .photo {img{width:100%;}}
+                h2 {font-size:0.75rem; padding:5px 0;}
+                .price {em{font-weight:600;}}
+                .btm {
+                    margin-top:30px;
+                    border-top:1px solid $ft_color2;
+                    display:flex;
+                    flex-flow:row wrap;
+                    justify-content:space-between;
+                    padding:10px 0;
+                    .size {font-size:0.75rem;}
+                    .review {font-size:0.75rem; color:coral;}
+                }
+                p {
+                    .best {font-size:0.75rem; background-color:bisque; color:$wh; margin-right:5px; padding:1px;}
+                    .order {font-size:0.75rem; background-color:navy; color:$wh; padding:1px;}
+                }
+            }
+        }
+    }
+    .btm_banner {
+        background:url(../images/made_img.jpg)center no-repeat;
+        background-size:cover;
+        background-position:center;
+        padding:100px 0;
+        text-align:center;
+        h1 {color:$wh; font-size:3rem; font-weight:600; padding-bottom:20px;}
+        a {color:$wh; border:1px solid $wh; padding:10px 25px;}
+        margin-bottom:100px;
+    } 
+    border-bottom:1px solid $ft_color2;
+}// main end
+footer {
+    padding:50px 0;
+    width:1200px;
+    margin:0 auto;
+    .etc {
+        a {color:$ft_color2; font-size:0.75rem; margin-right:20px;}
+        a:nth-child(2) {color:$ft_color1; font-size:0.75rem;}
+    }
+    p {font-size:0.75rem; line-height:1.5; padding:10px 0;}
+}

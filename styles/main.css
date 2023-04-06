@@ -126,7 +126,7 @@ header .btm nav > ul > li .sub li a {
 }
 
 main {
-  height: 500vh;
+  border-bottom: 1px solid #aaa;
 }
 main #right_popup {
   position: fixed;
@@ -208,4 +208,106 @@ main #right_popup .contents address + p {
 }
 main .visual {
   background: pink;
+}
+main .event_banner {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  padding: 70px 0;
+  grid-template-columns: repeat(3, 32%);
+  justify-content: space-between;
+}
+main .event_banner a img {
+  width: 100%;
+}
+main .weekly_best {
+  width: 1200px;
+  margin: 0 auto;
+}
+main .weekly_best > h2 {
+  text-align: center;
+  font-weight: 600;
+}
+main .weekly_best .product {
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 32.5%);
+  justify-content: space-between;
+}
+main .weekly_best .product li .photo img {
+  width: 100%;
+}
+main .weekly_best .product li h2 {
+  font-size: 0.75rem;
+  padding: 5px 0;
+}
+main .weekly_best .product li .price em {
+  font-weight: 600;
+}
+main .weekly_best .product li .btm {
+  margin-top: 30px;
+  border-top: 1px solid #aaa;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+main .weekly_best .product li .btm .size {
+  font-size: 0.75rem;
+}
+main .weekly_best .product li .btm .review {
+  font-size: 0.75rem;
+  color: coral;
+}
+main .weekly_best .product li p .best {
+  font-size: 0.75rem;
+  background-color: bisque;
+  color: #fff;
+  margin-right: 5px;
+  padding: 1px;
+}
+main .weekly_best .product li p .order {
+  font-size: 0.75rem;
+  background-color: navy;
+  color: #fff;
+  padding: 1px;
+}
+main .btm_banner {
+  background: url(../images/made_img.jpg) center no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  margin-bottom: 100px;
+}
+main .btm_banner h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+main .btm_banner a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 25px;
+}
+
+footer {
+  padding: 50px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+footer .etc a {
+  color: #aaa;
+  font-size: 0.75rem;
+  margin-right: 20px;
+}
+footer .etc a:nth-child(2) {
+  color: #222;
+  font-size: 0.75rem;
+}
+footer p {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 10px 0;
 }/*# sourceMappingURL=main.css.map */
